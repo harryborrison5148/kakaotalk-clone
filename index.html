@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,24 +9,37 @@
   </head>
   <body>
     <div class="status-bar">
-      <span>No Service</span>
-      <!-- Wifi icon -->
-      <span>18:43</span>
-      <!-- location icon -->
-      <span>11%</span>
-      <!-- battery status icon -->
-      <!-- charging icon -->
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>12:04</span>
+      </div>
+      <div class="status-bar__column">
+        <i class="fas fa-search-location"></i>
+        <span>96%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
     </div>
 
-    <header>
-      <h1>Welcome to LunaTalk</h1>
-      <p>If you have a Luna Account, log in with your email or phone number.</p>
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to LunaTalk</h1>
+      <p class="welcome-header__text">
+        If you have a Luna Account, log in with your email or phone number.
+      </p>
     </header>
 
-    <form>
+    <form class="login-form">
       <input type="text" placeholder="Email or phone number" />
       <input type="password" placeholder="Password" />
-      <input type="submit" />
+      <input type="submit" value="Log in" />
+      <a href="#">Find Luna Account or Password</a>
     </form>
+    <script
+      src="https://kit.fontawesome.com/ba6f597ec0.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
