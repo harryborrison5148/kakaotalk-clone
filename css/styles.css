@@ -2,6 +2,7 @@
 @import "reset.css";
 @import "status-bar.css";
 @import "variables.css";
+@import "login.css";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -24,48 +25,3 @@ body {
   opacity: 0.5;
 }
 /* header done */
-
-/* Login Form Start */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 30px;
-}
-.login-form input {
-  border: none;
-  padding: 15px 0px;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.login-form input:not([type="submit"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  transition: border-color 350ms ease-in-out;
-}
-
-.login-form input:nth-child(2) {
-  margin-bottom: 20px;
-}
-
-.login-form input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.login-form input:focus {
-  border-color: var(--yellow);
-}
-
-.login-form input[type="submit"] {
-  background-color: var(--yellow);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.login-form a {
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  opacity: 0.7;
-  font-size: 13px;
-}
-/* Login Form Done */
