@@ -133,3 +133,7 @@
 .open-chat__post1__likecount {
   margin-left: 2px;
 }
+
+.user-component__bangspan {
+  display: flex;
+}

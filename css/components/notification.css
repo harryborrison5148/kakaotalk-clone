@@ -20,3 +20,14 @@
   bottom: 35px;
   right: -5px;
 }
+
+.download_notification {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  background-color: tomato;
+  left: 200px;
+  top: 225px;
+}

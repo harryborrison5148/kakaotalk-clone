@@ -23,7 +23,7 @@
 .user-component__subtitle {
   margin-top: 8px;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .user-component__avatar--xl {
@@ -51,4 +51,13 @@
 .user-component__time {
   margin-bottom: 10px;
   display: block;
+}
+
+.user-component__number {
+  display: flex;
+}
+
+.fa-exclamation-circle {
+  color: tomato;
+  margin-left: 5px;
 }
