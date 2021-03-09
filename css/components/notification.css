@@ -28,6 +28,6 @@
   display: flex;
   position: absolute;
   background-color: tomato;
-  left: 200px;
-  top: 225px;
+  left: 60px;
+  bottom: 60px;
 }
