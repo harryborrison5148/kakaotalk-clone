@@ -20,6 +20,7 @@
   position: absolute;
   left: 21px;
   bottom: 18px;
+  animation: chat_notification 1s infinite ease-in-out;
 }
 
 .nav__menu_notification {
@@ -31,4 +32,17 @@
   position: absolute;
   left: 30px;
   bottom: 35px;
+}
+
+@keyframes chat_notification {
+  0% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(3px);
+  }
 }

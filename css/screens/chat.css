@@ -38,12 +38,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: chat_fadein 1s ease-in-out;
+}
+
+@keyframes chat_fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .message-row {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
+  animation: row-side__animation 1s;
+}
+
+@keyframes row-side__animation {
+  from {
+    transform: translateX(-70px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
 }
 
 .message-row img {
@@ -80,6 +103,16 @@
 
 .message-row--own {
   justify-content: flex-end;
+  animation: row-own-side__animation 1s;
+}
+
+@keyframes row-own-side__animation {
+  from {
+    transform: translateX(70px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 .message-row--own .message__bubble {
@@ -103,6 +136,7 @@
   justify-content: space-between;
   padding: 5px 20px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .reply .reply__column:first-child {
@@ -111,9 +145,64 @@
 
 .reply .reply__column:last-child {
   width: 90%;
+  position: relative;
 }
 
 .reply input {
-  height: 25px;
-  width: 100%;
+  padding: 10px;
+  width: 96%;
+  border: var(--main-border-bottom);
+  border-radius: 15px;
+  background-color: rgba(247, 247, 247, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply button {
+  position: absolute;
+  right: -4px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 7px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(173, 151, 4, 0.2);
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+.reply i {
+  font-size: 25px;
+  opacity: 0.5;
+}
+
+.reply__column button i {
+  opacity: 0.95;
+}
+
+.reply:focus-within .reply__column i,
+.reply:focus-within .reply__column button {
+  opacity: 0;
+}
+
+.reply__column i,
+.reply__column button {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.reply:focus-within input {
+  width: 89vw;
+  transform: translateX(-13%);
 }

@@ -124,6 +124,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .open-chat__post1__content {
@@ -136,4 +138,10 @@
 
 .user-component__bangspan {
   display: flex;
+}
+
+.open-chat__post1__like:focus,
+.open-chat__post1__like:hover {
+  color: red;
+  opacity: 0.7;
 }
